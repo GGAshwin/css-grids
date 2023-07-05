@@ -1,0 +1,35 @@
+#grid-container{
+    border: 2px dotted green;
+    display: grid;
+    /* grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end]; */
+    /* grid-template-columns: 50% 50%; */
+    /* grid-template-columns: repeat(2, 50%); */
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-columns: repeat(2, 200px); */
+    grid-template-columns: repeat(4, 1fr);
+
+    /* No repeat function for template-rows */
+    /* Means only the items on the first row will have height of 200px */
+    grid-template-rows: 200px;
+    /* Defines the height for two rows */
+    grid-template-rows: 200px 200px;
+
+    /* justify-items: center;
+    align-items: center; */
+
+    /* shorthand for noth justifyItems and alignItems */
+    place-items: center;
+
+    /* Used when columns are defined with PIXELS as opposed to FR */
+    /* Left Right */
+    justify-content: space-around;
+    
+    /* Used when columns are defined with PIXELS as opposed to FR */
+    /* Up Down */
+    align-content: start;
+
+}
+
+.grid-item{
+    border: 2px solid;
+}

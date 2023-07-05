@@ -1,0 +1,53 @@
+.grid-container {
+    display: grid;
+    /* grid-template-columns: 2fr 1fr; */
+    grid-template-columns: repeat(2, 400px);
+    /* grid-template-rows: 200px 150px; */
+    /* grid-auto-rows: 50px; */
+    grid-auto-rows: minmax(150px, auto);
+    /*If the content of some of the items are large then use minmax first value is minimum and second is the max value auto in this case*/
+    grid-gap: 20px;
+    /* grid-template-areas: 
+    "header header"
+    "sidebar content"
+    "sidebar content"
+    ; */
+
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+.grid-item {
+    border: 2px solid;
+    padding: 20px;
+    /* margin: 2px; */
+}
+
+.grid-item-1 {
+    /* grid-area: header; */
+    /* grid-column-start: 1; */
+    /* grid-column-end: 3; */
+    /* grid-column-end: -1; */
+
+    grid-column: 1/-1;
+    /*same as defining the start and ends*/
+    /* OR */
+    grid-column: span 2;
+
+    align-self: start;
+    justify-self: center;
+}
+
+.grid-item-2 {
+    /* grid-area: sidebar; */
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.grid-item-3 {
+    /* grid-area: content; */
+    grid-row: 2/4;
+    /* OR */
+    grid-row: span 2;
+}
